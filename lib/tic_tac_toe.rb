@@ -74,10 +74,14 @@ def won?(board)
     if combo.all? {|index| board[index]=="X"} || combo.all? {|index| board[index]=="O"}
   end
 end
-end
+
 
 def full(board)
-  board.all? {|index| index== "X" || index =="O"}
+  if board.all? {|index| index== "X" || index =="O"}
+    true
+  else
+    false
+  end
 end 
 
 def draw(board)
